@@ -1,22 +1,22 @@
 //testing user login
 var objPeople = [
-    {//Object @ 0 index}
-        username:"s118385@bggs.qld.edu.au",
-        password: "Student1"
-    },
-    {//Object @ 1 index
-        username:"s119091@terrace.qld.edu.au",
-        password: "Student2"
-    }
+	{//Object @ 0 index}
+		username: "s118385@bggs.qld.edu.au",
+		password: "Student1"
+	},
+	{//Object @ 1 index
+		username: "s119091@terrace.qld.edu.au",
+		password: "Student2"
+	}
 ]
 
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
 
-	for(var i = 0; i < objPeople.length; i++) {
+	for (var i = 0; i < objPeople.length; i++) {
 		// check is user input matches username and password of a current index of the objPeople array
-		if(username == objPeople[i].username && password == objPeople[i].password) {
+		if (username == objPeople[i].username && password == objPeople[i].password) {
 			console.log(username + " is logged in!!!")
 			// stop the function if this is found to be true
 			return
@@ -29,23 +29,24 @@ function getInfo() {
 
 const submitBtn = document.getElementById('submit-btn');
 
-const validate = (e) =>{
+const validate = (e) => {
 	e.preventDefault();
 	const username = document.getElementById('username')
 	const password = document.getElementById('password')
+	const errorMessage = document.getElementById('error-message')
 
 	//styles the display and background of the error message to pink
 	errorMessage.style.display = 'block';
 	errorMessage.style.backgroundColor = 'pink';
 
 	//checks that the username and password fields have been filled out
-	if(username.value === "" || password.value === "") {
+	if (username.value === "" || password.value === "") {
 		errorMessage.innerText = ('Username and password are required');
 		return false;
 	}
 
 	if (!usernameIsValid(username.value)) {
-		errorMessaage.innerText = ('Please enter a valid username or email address');
+		errorMessage.innerText = ('Please enter a valid username or email address');
 		return false;
 	}
 
@@ -65,4 +66,7 @@ const passwordIsValid = password => {
 	return /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password);
 }
 
-submitBtn.addEventListener('click', validate);
+submitBtn.addEventListener('click', (e) => {
+	validate(e);
+	getInfo();
+});

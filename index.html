@@ -1,46 +1,45 @@
 <html lang="en">
-  <meta charset="utf-8" />
-    <head>
-      <title>Form Validation</title>
-      <link rel="stylesheet" href="login.css"/>
-      <script src="login.js" defer></script>
-    </head>
+<meta charset="utf-8" />
+
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="login.js" defer></script>
+</head>
 
 
 
 <body>
 
- <div class="container">
+  <div class="container">
     <div class="main">
 
 
-        <h2>Login</h2>
+      <h2>Login</h2>
 
-        <script src="login.js"></script>
+      <form id="form" method="post" name="myform">
 
-        <form id="form" method="post" name="myform">
-  
-          <label>Username :</label>
-  
-          <input type="username" name="username" id="username"
-          placeholder="email@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-          
-          <label>Password :</label>
+        <label>Username :</label>
 
-          <input type="password" name="password" id="password" placeholder="password min 8 characters" required
+        <input type="username" name="username" id="username" placeholder="email@gmail.com" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+        <label>Password :</label>
+
+        <input type="password" name="password" id="password" placeholder="password min 8 characters" required
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          title="Must contain at least one number and one uppercase and lowecase letter, and at least 8 or more characters">
-  
-          <input type="button" value="Login" id="submit-btn" onclick="getInfo();">
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+        <p id="error-message"></p>
+        <input type="button" value="Login" id="submit-btn">
 
-          <div id="error"></div>
+        <div id="error"></div>
 
-        </form>
+      </form>
 
     </div>
-    
+
   </div>
-  
+
 </body>
 
 </html>
