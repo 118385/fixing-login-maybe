@@ -1,0 +1,80 @@
+h2{
+    background-color:#FEFFED;
+    padding: 30px 35px;
+    margin: -10px -50px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+div.main{
+  width: 40%;
+  height: 85%;
+  padding: 10px 50px 25px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+  margin-top: 50px;
+  background-image: url("/img/shutterstock_376532611-og.jpg");
+}
+
+input[type=username],input[type=password] {
+    width: 20%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    color: #4f4f4f;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+label {
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+  
+.back{
+    text-decoration: none;
+    border: 1px solid #1C2B39;
+    background-color:#00649d;
+    padding: 3px 20px;
+    border-radius: 2px;
+    color: black;
+  }
+
+
+input[type=button]{
+    font-size: 16px;
+    background: #008f7c ;
+    border: 1px solid #e5a900;
+    color: #4E4D4B;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline: none;
+  }
+
+input[type=button]:hover{
+    background: linerar-gradient (#ffdd7f 5%, #ff0000 100%);
+  }
+  
+  /*validation*/
+input:validation {
+    border-color: #ccc;
+  }
+  
+inpit:invalid {
+    border-color: red;
+  }
+  
+#error {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: red;
+  }
