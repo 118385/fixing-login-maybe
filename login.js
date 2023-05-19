@@ -33,7 +33,7 @@ const validate = (e) => {
 	e.preventDefault();
 	const username = document.getElementById('username')
 	const password = document.getElementById('password')
-	const errorMessage = document.getElementById('error-message')
+	const errorMessage = document.getElementById('error')
 
 	//styles the display and background of the error message to pink
 	errorMessage.style.display = 'block';
