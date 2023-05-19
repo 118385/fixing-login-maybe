@@ -5,7 +5,7 @@ var objPeople = [
 		password: "Student1"
 	},
 	{//Object @ 1 index
-		username: "s119091@terrace.qld.edu.au",
+		username: "s3119091@terrace.qld.edu.au",
 		password: "Student2"
 	}
 ]
