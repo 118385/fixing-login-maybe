@@ -68,7 +68,6 @@ const passwordIsValid = password => {
 
 submitBtn.addEventListener('click', (e) => {
 	validate(e);
-	
 });
 
 form.addEventListener('submit', () => {
